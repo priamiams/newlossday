@@ -3,7 +3,7 @@ export const outdoorData = [
     id: 1,
     title: 'Sewa Alat Pendakian Standar',
     location: 'Toko / Basecamp',
-    image: '/img/gear rent/sewa-alat-pendakian.png',
+    image: '/img/gear-rent/sewa-alat-pendakian.png',
     description: 'Layanan sewa alat pendakian standar kami disediakan untuk memenuhi kebutuhan pendaki yang ingin melakukan perjalanan gunung dengan perlengkapan lengkap tanpa harus membeli perlengkapan pribadi. Seluruh peralatan dalam kondisi layak pakai, bersih, dan rutin dicek sebelum digunakan, sehingga aman dan nyaman untuk pendakian. Paket ini cocok untuk pendaki pemula hingga menengah, open trip, maupun private trip gunung.',
     features: [
       'Tenda gunung (kapasitas 2–4 orang, sharing)',
@@ -29,7 +29,7 @@ export const outdoorData = [
     id: 2,
     title: 'Sewa Tenda Gunung',
     location: 'Toko / Basecamp',
-    image: '/img/gear rent/sewa-tenda.png',
+    image: '/img/gear-rent/sewa-tenda.png',
     description: 'Layanan sewa tenda gunung tersedia untuk pendaki yang membutuhkan perlindungan maksimal saat bermalam di alam terbuka. Tenda cocok digunakan di berbagai kondisi cuaca dan lokasi pendakian.',
     features: [
       'Tenda gunung waterproof',
@@ -50,7 +50,7 @@ export const outdoorData = [
     id: 3,
     title: 'Sewa Carrier',
     location: 'Toko / Basecamp',
-    image: '/img/gear rent/sewa-carrier.png',
+    image: '/img/gear-rent/sewa-carrier.png',
     description: 'Sewa carrier disediakan bagi pendaki yang membutuhkan tas gunung berkapasitas besar dan nyaman untuk membawa perlengkapan selama pendakian.',
     features: [
       'Carrier 50L / 60L / 70L',
@@ -70,7 +70,7 @@ export const outdoorData = [
     id: 4,
     title: 'Sewa Sleeping Bag & Matras',
     location: 'Toko / Basecamp',
-    image: '/img/gear rent/sewa-sleepingbag.png',
+    image: '/img/gear-rent/sewa-sleepingbag.png',
     description: 'Layanan sewa sleeping bag dan matras cocok untuk menjaga kenyamanan dan kehangatan saat bermalam di gunung. Perlengkapan ini sangat penting untuk menjaga suhu tubuh selama istirahat.',
     features: [
       'Sleeping bag',
@@ -90,7 +90,7 @@ export const outdoorData = [
     id: 5,
     title: 'Sewa Alat Masak Gunung',
     location: 'Toko / Basecamp',
-    image: '/img/gear rent/sewa-alatmasak.png',
+    image: '/img/gear-rent/sewa-alatmasak.png',
     description: 'Sewa alat masak gunung disediakan untuk memenuhi kebutuhan logistik dan konsumsi selama pendakian. Peralatan praktis dan ringan, cocok digunakan di alam terbuka.',
     features: [
       'Nesting',
