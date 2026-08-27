@@ -10,22 +10,34 @@ const TransportRental = () => {
         <div className="text-center max-w-3xl mx-auto mb-16">
           <motion.h2 
             className="text-3xl md:text-4xl font-bold mb-4"
-            >
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.6 }}
+          >
             Layanan <span className="text-primary">Rental Transportasi</span>
           </motion.h2>
           <motion.p 
             className="text-gray-600"
-            >
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+          >
             Armada kendaraan terbaru, bersih, dan terawat dengan pengemudi profesional yang siap menemani perjalanan Anda.
           </motion.p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {transportData.map((car) => (
+          {transportData.map((car, index) => (
             <motion.div 
               key={car.id}
               className="card-modern relative overflow-hidden group p-6 border-t-[5px] border-t-accent"
               whileHover={{ y: -15, scale: 1.03 }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
             >
               {/* Animated decorative background */}
               <div className="absolute -top-10 -right-10 w-32 h-32 bg-gradient-to-br from-accent/20 to-primary/10 rounded-full blur-2xl group-hover:scale-150 transition-transform duration-700"></div>

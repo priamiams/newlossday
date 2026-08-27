@@ -38,13 +38,21 @@ const WhyChooseUs = () => {
           <div className="lg:w-1/2 text-white">
             <motion.h2 
               className="text-3xl md:text-5xl font-bold mb-6 leading-tight"
-              >
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.6 }}
+            >
               Mengapa Memilih <br/>
               <span className="text-accent">Lossday Sejahtera?</span>
             </motion.h2>
             <motion.p 
               className="text-blue-100 text-lg mb-8 leading-relaxed"
-              >
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+            >
               Pengalaman bertahun-tahun di industri pariwisata membuat kami memahami betul bagaimana menciptakan perjalanan yang sempurna. Kami tidak hanya sekedar travel agent, kami adalah rekan petualang Anda.
             </motion.p>
             
@@ -53,7 +61,11 @@ const WhyChooseUs = () => {
                 <motion.div 
                   key={index}
                   className="flex gap-4"
-                  >
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true, margin: "-50px" }}
+                  transition={{ duration: 0.5, delay: 0.3 + (index * 0.1) }}
+                >
                   <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center shrink-0 text-accent text-2xl">
                     {item.icon}
                   </div>
@@ -69,7 +81,11 @@ const WhyChooseUs = () => {
           {/* Right Image/Video Placeholder */}
           <motion.div 
             className="lg:w-1/2 w-full"
-            >
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+          >
             <div className="relative rounded-2xl overflow-hidden shadow-2xl h-[500px]">
               <div 
                 className="absolute inset-0 bg-cover bg-center"

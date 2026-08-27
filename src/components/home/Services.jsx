@@ -13,20 +13,28 @@ const Services = () => {
         <div className="text-center max-w-3xl mx-auto mb-16">
           <motion.h2 
             className="text-3xl md:text-4xl font-bold mb-4"
-            >
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.6 }}
+          >
             Layanan <span className="text-accent">Unggulan</span> Kami
           </motion.h2>
           <motion.p 
             className="text-gray-600"
-            >
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+          >
             Kami menawarkan berbagai layanan perjalanan dan penyewaan untuk memenuhi segala kebutuhan petualangan Anda.
           </motion.p>
         </div>
 
         <motion.div 
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-          >
-          {servicesData.map((service) => {
+        >
+          {servicesData.map((service, index) => {
             const Icon = Icons[service.icon];
             
             return (
@@ -34,6 +42,10 @@ const Services = () => {
                 key={service.id}
                 whileHover={{ scale: 1.05, y: -10 }}
                 className="card-modern p-8 text-center group cursor-pointer"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
               >
                 <div className="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-primary transition-colors duration-300">
                   {Icon && <Icon className="text-4xl text-primary group-hover:text-white transition-colors duration-300" />}

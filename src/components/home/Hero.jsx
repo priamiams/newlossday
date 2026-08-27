@@ -21,6 +21,9 @@ const Hero = () => {
       {/* Content */}
       <motion.div 
         className="container mx-auto px-4 z-10 text-center text-white pt-20"
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1, ease: "easeOut" }}
       >
         <motion.p
           className="text-accent font-medium tracking-widest mb-4 text-sm md:text-base uppercase letter-spacing-[0.2em]"

@@ -3,11 +3,15 @@ import { mountainsData } from '../../data/mountains';
 import { islandsData } from '../../data/islands';
 import { MdAccessTime, MdLocationOn } from 'react-icons/md';
 
-const TripCard = ({ trip }) => {
+const TripCard = ({ trip, index = 0 }) => {
   return (
     <motion.div 
       className="card-modern group"
       whileHover={{ y: -10, scale: 1.02 }}
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-50px" }}
+      transition={{ duration: 0.5, delay: index * 0.1 }}
     >
       <div className="relative overflow-hidden h-64">
         <div 
@@ -59,26 +63,38 @@ const FeaturedTrips = () => {
             <div className="max-w-2xl">
               <motion.h2 
                 className="text-3xl md:text-4xl font-bold mb-4"
-                >
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{ duration: 0.6 }}
+              >
                 Trip <span className="text-primary">Gunung</span> Terpopuler
               </motion.h2>
               <motion.p 
                 className="text-gray-600"
-                >
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+              >
                 Taklukkan puncak tertinggi dan nikmati pemandangan alam memukau di atas awan.
               </motion.p>
             </div>
             <motion.a 
               href="/packages" 
               className="mt-6 md:mt-0 text-primary font-medium hover:text-accent transition-colors hidden md:block"
-              >
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+            >
               Lihat Semua Gunung &rarr;
             </motion.a>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {mountainsData.slice(0, 3).map((mountain) => (
-              <TripCard key={`mt-${mountain.id}`} trip={mountain} />
+            {mountainsData.slice(0, 3).map((mountain, index) => (
+              <TripCard key={`mt-${mountain.id}`} trip={mountain} index={index} />
             ))}
           </div>
         </div>
@@ -89,26 +105,38 @@ const FeaturedTrips = () => {
             <div className="max-w-2xl">
               <motion.h2 
                 className="text-3xl md:text-4xl font-bold mb-4"
-                >
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{ duration: 0.6 }}
+              >
                 Trip <span className="text-primary">Pulau</span> Menawan
               </motion.h2>
               <motion.p 
                 className="text-gray-600"
-                >
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+              >
                 Rasakan hembusan angin laut dan pesona bawah laut yang tiada duanya.
               </motion.p>
             </div>
             <motion.a 
               href="/packages" 
               className="mt-6 md:mt-0 text-primary font-medium hover:text-accent transition-colors hidden md:block"
-              >
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+            >
               Lihat Semua Pulau &rarr;
             </motion.a>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {islandsData.slice(0, 3).map((island) => (
-              <TripCard key={`is-${island.id}`} trip={island} />
+            {islandsData.slice(0, 3).map((island, index) => (
+              <TripCard key={`is-${island.id}`} trip={island} index={index} />
             ))}
           </div>
         </div>

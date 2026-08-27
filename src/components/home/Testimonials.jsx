@@ -71,18 +71,30 @@ const Testimonials = () => {
         <div className="text-center max-w-3xl mx-auto mb-16">
           <motion.h2 
             className="text-3xl md:text-4xl font-bold mb-4"
-            >
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.6 }}
+          >
             Apa Kata <span className="text-primary">Pelanggan Kami?</span>
           </motion.h2>
           <motion.p 
             className="text-gray-600"
-            >
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+          >
             Lebih dari ribuan pelanggan telah mempercayakan perjalanan mereka kepada PT Lossday Sejahtera Group.
           </motion.p>
         </div>
 
         <motion.div
-          >
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-50px" }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+        >
           <Swiper
             modules={[Pagination, Autoplay]}
             spaceBetween={30}
