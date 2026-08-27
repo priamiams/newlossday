@@ -247,7 +247,7 @@ export const mountainsData = [
     ],
     kuota: 'Min 3 – Max 16',
     jadwal: 'By Request',
-    price: 'Mulai Rp 400.000 / orang',
+    price: 'Mulai Rp 385.000 / orang',
     catatan: 'Jalur hutan cukup rapat'
   },
   {
@@ -272,7 +272,7 @@ export const mountainsData = [
     ],
     kuota: 'Min 3 – Max 12',
     jadwal: 'By Request',
-    price: 'Mulai Rp 800.000 / orang',
+    price: 'Mulai Rp 850.000 / orang',
     catatan: 'Spot foto sangat banyak'
   },
   {
@@ -398,7 +398,7 @@ export const mountainsData = [
     ],
     kuota: 'Min 4 – Max 16',
     jadwal: 'By Request',
-    price: 'Mulai Rp 2.400.000 / orang',
+    price: 'Mulai Rp 2.550.000 / orang',
     catatan: 'Wajib pengalaman & mental kuat'
   },
   {

@@ -105,7 +105,7 @@ export const islandsData = [
     ],
     kuota: 'Min 4 – Max 17',
     jadwal: 'By Request',
-    price: 'Mulai Rp 400.000 / orang',
+    price: 'Mulai Rp 390.000 / orang',
     catatan: 'Pulau hopping menyesuaikan kondisi laut'
   }
 ];
