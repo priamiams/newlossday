@@ -3,6 +3,8 @@ const fs = require('fs');
 let galleryStr = 'export const galleryData = [\n';
 
 for (let i = 1; i <= 70; i++) {
+  if (i === 30 || i === 35 || i === 36) continue;
+  
   let category = '';
   
   if (i >= 1 && i <= 22) {
