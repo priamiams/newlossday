@@ -3,20 +3,9 @@ import { servicesData } from '../../data/services';
 import * as Icons from 'react-icons/md';
 
 const Services = () => {
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1
-      }
-    }
-  };
 
-  const itemVariants = {
-    hidden: { opacity: 0, y: 30 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }
-  };
+
+
 
   return (
     <section className="py-20 bg-gray-50">
@@ -24,37 +13,25 @@ const Services = () => {
         <div className="text-center max-w-3xl mx-auto mb-16">
           <motion.h2 
             className="text-3xl md:text-4xl font-bold mb-4"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-          >
+            >
             Layanan <span className="text-accent">Unggulan</span> Kami
           </motion.h2>
           <motion.p 
             className="text-gray-600"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.2 }}
-          >
+            >
             Kami menawarkan berbagai layanan perjalanan dan penyewaan untuk memenuhi segala kebutuhan petualangan Anda.
           </motion.p>
         </div>
 
         <motion.div 
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-100px" }}
-        >
+          >
           {servicesData.map((service) => {
             const Icon = Icons[service.icon];
             
             return (
               <motion.div 
                 key={service.id}
-                variants={itemVariants}
                 whileHover={{ scale: 1.05, y: -10 }}
                 className="card-modern p-8 text-center group cursor-pointer"
               >

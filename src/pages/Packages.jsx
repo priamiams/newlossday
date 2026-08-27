@@ -7,6 +7,7 @@ import { islandsData } from '../data/islands';
 import { gatheringData } from '../data/gathering';
 import { transportData } from '../data/transport';
 import { outdoorData } from '../data/outdoor';
+import { exploreData } from '../data/explore';
 import { companyData } from '../data/company';
 import { MdLocationOn, MdAccessTime, MdSearch, MdClose, MdCheckCircle, MdEvent, MdPeople, MdDirectionsRun, MdInfo } from 'react-icons/md';
 
@@ -19,12 +20,13 @@ const Packages = () => {
   const allTrips = [
     ...mountainsData.map(t => ({ ...t, category: 'Gunung' })),
     ...islandsData.map(t => ({ ...t, category: 'Pulau' })),
+    ...exploreData.map(t => ({ ...t, category: 'Explore' })),
     ...gatheringData.map(t => ({ ...t, category: 'Gathering' })),
     ...transportData.map(t => ({ ...t, category: 'Sewa Transportasi' })),
     ...outdoorData.map(t => ({ ...t, category: 'Sewa Peralatan' })),
   ];
 
-  const categories = ['Semua', 'Gunung', 'Pulau', 'Gathering', 'Sewa Transportasi', 'Sewa Peralatan'];
+  const categories = ['Semua', 'Gunung', 'Pulau', 'Explore', 'Gathering', 'Sewa Transportasi', 'Sewa Peralatan'];
 
   const filteredTrips = allTrips.filter(trip => {
     const matchCategory = activeCategory === 'Semua' || trip.category === activeCategory;
@@ -41,7 +43,11 @@ const Packages = () => {
 
   return (
     <>
-      <SEO title="Paket Perjalanan" description="Pilihan paket Open Trip, Private Trip, dan Gathering terbaik dari PT Lossday Sejahtera Group." />
+      <SEO 
+        title="Paket Perjalanan" 
+        description="Pilihan paket Open Trip, Private Trip, dan Corporate Gathering, Sewa Transportasi, dan Sewa Alat Outdoor terbaik dari PT Lossday Sejahtera Group." 
+        keywords="paket perjalanan murah, open trip gunung, private trip premium, paket gathering perusahaan, sewa hiace bogor, sewa alat camping bogor"
+      />
       <PageBanner title="Paket Perjalanan" bgImage="/img/dokumentasi/gambar1.jpg" />
       
       <section className="py-20 bg-gray-50 min-h-screen">
@@ -81,11 +87,10 @@ const Packages = () => {
           </div>
 
           {/* Cards Grid */}
-          <motion.div 
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-            layout
+          <div 
+            className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-8"
           >
-            <AnimatePresence>
+            <AnimatePresence mode="popLayout">
               {filteredTrips.map(trip => (
                 <motion.div 
                   key={`${trip.category}-${trip.id}`}
@@ -96,41 +101,43 @@ const Packages = () => {
                   transition={{ duration: 0.3 }}
                   className="card-modern group"
                 >
-                  <div className="relative overflow-hidden h-64">
+                  <div className="relative overflow-hidden h-36 md:h-64">
                     <div 
                       className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
                       style={{ backgroundImage: `url(${trip.image})`, backgroundColor: '#e2e8f0' }}
                     ></div>
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
                     
-                    <div className="absolute top-4 left-4">
-                      <span className="bg-primary text-white text-xs font-bold px-3 py-1 rounded-full">
+                    <div className="absolute top-2 left-2 md:top-4 md:left-4">
+                      <span className="bg-primary text-white text-[10px] md:text-xs font-bold px-2 py-0.5 md:px-3 md:py-1 rounded-full">
                         {trip.category}
                       </span>
                     </div>
                     
-                    <div className="absolute bottom-4 left-4 right-4 text-white">
-                      <h3 className="text-xl font-bold mb-1">{trip.title}</h3>
+                    <div className="absolute bottom-2 left-2 right-2 md:bottom-4 md:left-4 md:right-4 text-white">
+                      <h3 className="text-sm md:text-xl font-bold mb-0.5 md:mb-1 line-clamp-1">{trip.title}</h3>
                       {trip.location && (
-                        <div className="flex items-center text-sm text-gray-300 gap-4">
-                          <span className="flex items-center gap-1"><MdLocationOn /> {trip.location}</span>
-                          <span className="flex items-center gap-1"><MdAccessTime /> {trip.duration}</span>
+                        <div className="flex flex-wrap items-center text-[10px] md:text-sm text-gray-300 gap-2 md:gap-4">
+                          <span className="flex items-center gap-0.5 md:gap-1"><MdLocationOn /> {trip.location}</span>
+                          <span className="flex items-center gap-0.5 md:gap-1"><MdAccessTime /> {trip.duration}</span>
                         </div>
                       )}
                     </div>
                   </div>
                   
-                  <div className="p-6 flex flex-col justify-between h-48">
-                    <p className="text-gray-600 line-clamp-3">{trip.description}</p>
+                  <div className="p-3 md:p-6 flex flex-col justify-between h-32 md:h-48">
+                    <p className="text-gray-600 text-xs md:text-base line-clamp-2 md:line-clamp-3">{trip.description}</p>
                     
-                    <div className="mt-auto pt-4 border-t border-gray-100 flex items-center justify-between">
+                    <div className="mt-auto pt-2 md:pt-4 border-t border-gray-100 flex items-center justify-between">
                       <div>
-                        <span className="text-xs text-gray-500 block">Mulai dari</span>
-                        <span className="text-lg font-bold text-accent">{trip.price}</span>
+                        <span className="text-[10px] md:text-xs text-gray-500 block leading-tight">Mulai dari</span>
+                        <span className="text-xs md:text-lg font-bold text-accent leading-tight">
+                          {trip.price.replace('Mulai ', '').replace(' / orang', '')}
+                        </span>
                       </div>
                       <button 
                         onClick={() => setSelectedTrip(trip)}
-                        className="btn-primary py-2 px-4 text-sm"
+                        className="btn-primary py-1 px-2 text-[10px] md:py-2 md:px-4 md:text-sm rounded-lg"
                       >
                         Detail
                       </button>
@@ -139,7 +146,7 @@ const Packages = () => {
                 </motion.div>
               ))}
             </AnimatePresence>
-          </motion.div>
+          </div>
 
           {filteredTrips.length === 0 && (
             <div className="text-center py-20">

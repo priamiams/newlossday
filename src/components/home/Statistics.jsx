@@ -17,18 +17,9 @@ const Statistics = () => {
     { id: 4, icon: <MdStar />, value: 4.9, suffix: "", label: "Rating Kepuasan", decimals: 1 },
   ];
 
-  const container = {
-    hidden: { opacity: 0 },
-    show: {
-      opacity: 1,
-      transition: { staggerChildren: 0.2 }
-    }
-  };
 
-  const item = {
-    hidden: { opacity: 0, scale: 0.8 },
-    show: { opacity: 1, scale: 1, transition: { duration: 0.5, type: "spring" } }
-  };
+
+
 
   return (
     <section className="relative py-24 bg-dark text-white overflow-hidden" ref={ref}>
@@ -39,12 +30,9 @@ const Statistics = () => {
       <div className="container relative mx-auto px-4 md:px-8 z-10">
         <motion.div 
           className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center"
-          variants={container}
-          initial="hidden"
-          animate={inView ? "show" : "hidden"}
-        >
+          >
           {stats.map((stat) => (
-            <motion.div key={stat.id} variants={item} className="flex flex-col items-center group">
+            <motion.div key={stat.id} className="flex flex-col items-center group">
               <div className="text-accent text-5xl mb-4 group-hover:scale-110 group-hover:-translate-y-2 transition-transform duration-300 drop-shadow-[0_0_15px_rgba(250,150,30,0.5)]">
                 {stat.icon}
               </div>

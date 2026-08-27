@@ -9,7 +9,11 @@ import { Link } from 'react-router-dom';
 const About = () => {
   return (
     <>
-      <SEO title="Tentang Kami" description="Profil PT Lossday Sejahtera Group, Visi, Misi, dan Perjalanan Kami." />
+      <SEO 
+        title="Tentang Kami" 
+        description="Profil PT Lossday Sejahtera Group, Visi, Misi, Core Values dan Perjalanan Kami sebagai Premium Travel Agency di Indonesia." 
+        keywords="tentang pt lossday sejahtera group, profil travel premium, visi misi lossday sejahtera, sejarah lossday sejahtera group"
+      />
       <PageBanner title="Tentang Kami" bgImage="/img/dokumentasi/gambar15.jpg" />
       
       {/* Profil Perusahaan */}

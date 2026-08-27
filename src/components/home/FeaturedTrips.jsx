@@ -7,10 +7,6 @@ const TripCard = ({ trip }) => {
   return (
     <motion.div 
       className="card-modern group"
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.5 }}
       whileHover={{ y: -10, scale: 1.02 }}
     >
       <div className="relative overflow-hidden h-64">
@@ -63,29 +59,19 @@ const FeaturedTrips = () => {
             <div className="max-w-2xl">
               <motion.h2 
                 className="text-3xl md:text-4xl font-bold mb-4"
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-              >
+                >
                 Trip <span className="text-primary">Gunung</span> Terpopuler
               </motion.h2>
               <motion.p 
                 className="text-gray-600"
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.2 }}
-              >
+                >
                 Taklukkan puncak tertinggi dan nikmati pemandangan alam memukau di atas awan.
               </motion.p>
             </div>
             <motion.a 
               href="/packages" 
               className="mt-6 md:mt-0 text-primary font-medium hover:text-accent transition-colors hidden md:block"
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-            >
+              >
               Lihat Semua Gunung &rarr;
             </motion.a>
           </div>
@@ -103,29 +89,19 @@ const FeaturedTrips = () => {
             <div className="max-w-2xl">
               <motion.h2 
                 className="text-3xl md:text-4xl font-bold mb-4"
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-              >
+                >
                 Trip <span className="text-primary">Pulau</span> Menawan
               </motion.h2>
               <motion.p 
                 className="text-gray-600"
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.2 }}
-              >
+                >
                 Rasakan hembusan angin laut dan pesona bawah laut yang tiada duanya.
               </motion.p>
             </div>
             <motion.a 
               href="/packages" 
               className="mt-6 md:mt-0 text-primary font-medium hover:text-accent transition-colors hidden md:block"
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-            >
+              >
               Lihat Semua Pulau &rarr;
             </motion.a>
           </div>

@@ -25,7 +25,7 @@ export const islandsData = [
     ],
     kuota: 'Min 4 – Max 20',
     jadwal: 'By Request',
-    price: 'Mulai Rp 2.500.000 / orang',
+    price: 'Mulai Rp 1.400.000 / orang',
     catatan: 'Cuaca laut mempengaruhi jadwal penyeberangan'
   },
   {
@@ -51,7 +51,7 @@ export const islandsData = [
     ],
     kuota: 'Min 2 – Max 20',
     jadwal: 'By Request',
-    price: 'Mulai Rp 400.000 / orang',
+    price: 'Mulai Rp 390.000 / orang',
     catatan: 'Pulau tujuan menyesuaikan kuota & cuaca'
   },
   {
@@ -77,7 +77,7 @@ export const islandsData = [
     ],
     kuota: 'Min 2 – Max 15',
     jadwal: 'By Request',
-    price: 'Mulai Rp 300.000 / orang',
+    price: 'Mulai Rp 390.000 / orang',
     catatan: 'Trip santai & ramah keluarga'
   },
   {
@@ -105,7 +105,7 @@ export const islandsData = [
     ],
     kuota: 'Min 4 – Max 17',
     jadwal: 'By Request',
-    price: 'Mulai Rp 450.000 / orang',
+    price: 'Mulai Rp 400.000 / orang',
     catatan: 'Pulau hopping menyesuaikan kondisi laut'
   }
 ];

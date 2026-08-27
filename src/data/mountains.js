@@ -73,7 +73,7 @@ export const mountainsData = [
     ],
     kuota: 'Min 4 – Max 10',
     jadwal: 'By Request',
-    price: 'Mulai Rp 700.000 / orang',
+    price: 'Mulai Rp 685.000 / orang',
     catatan: 'Medan cukup terjal'
   },
   {
@@ -98,7 +98,7 @@ export const mountainsData = [
     ],
     kuota: 'Min 3 – Max 12',
     jadwal: 'By Request',
-    price: 'Mulai Rp 700.000 / orang',
+    price: 'Mulai Rp 650.000 / orang',
     catatan: 'Cocok untuk pemula dengan kondisi fisik baik'
   },
   {
@@ -121,7 +121,7 @@ export const mountainsData = [
     ],
     kuota: 'Min 3 – Max 15',
     jadwal: 'By Request',
-    price: 'Mulai Rp 400.000 / orang',
+    price: 'Mulai Rp 385.000 / orang',
     catatan: 'Trip santai tanpa camping'
   },
   {
@@ -222,7 +222,7 @@ export const mountainsData = [
     ],
     kuota: 'Min 3 – Max 12',
     jadwal: 'By Request',
-    price: 'Mulai Rp 800.000 / orang',
+    price: 'Mulai Rp 850.000 / orang',
     catatan: 'Suhu puncak cukup dingin'
   },
   {
@@ -272,7 +272,7 @@ export const mountainsData = [
     ],
     kuota: 'Min 3 – Max 12',
     jadwal: 'By Request',
-    price: 'Mulai Rp 850.000 / orang',
+    price: 'Mulai Rp 800.000 / orang',
     catatan: 'Spot foto sangat banyak'
   },
   {
@@ -324,7 +324,7 @@ export const mountainsData = [
     ],
     kuota: 'Min 3 – Max 15',
     jadwal: 'By Request',
-    price: 'Mulai Rp 400.000 / orang',
+    price: 'Mulai Rp 550.000 / orang',
     catatan: 'Cocok untuk pemula & first hike'
   },
   {
@@ -349,7 +349,7 @@ export const mountainsData = [
     ],
     kuota: 'Min 3 – Max 16',
     jadwal: 'By Request',
-    price: 'Mulai Rp 700.000 / orang',
+    price: 'Mulai Rp 685.000 / orang',
     catatan: 'Pendakian singkat & ramah pemula'
   },
   {
@@ -374,7 +374,7 @@ export const mountainsData = [
     ],
     kuota: 'Min 3 – Max 16',
     jadwal: 'By Request',
-    price: 'Mulai Rp 1.400.000 / orang',
+    price: 'Mulai Rp 1.900.000 / orang',
     catatan: 'Tidak sampai puncak Semeru'
   },
   {
@@ -424,7 +424,7 @@ export const mountainsData = [
     ],
     kuota: 'Min 4 – Max 18',
     jadwal: 'By Request',
-    price: 'Mulai Rp 2.300.000 / orang',
+    price: 'Mulai Rp 2.800.000 / orang',
     catatan: 'Cuaca cepat berubah'
   },
   {
@@ -474,7 +474,7 @@ export const mountainsData = [
     ],
     kuota: 'Min 3 – Max 8',
     jadwal: 'By Request',
-    price: 'Mulai Rp 450.000 / orang',
+    price: 'Mulai Rp 400.000 / orang',
     catatan: 'Hutan lebat & jalur licin'
   },
   {
@@ -499,7 +499,7 @@ export const mountainsData = [
     ],
     kuota: 'Min 3 – Max 8',
     jadwal: 'By Request',
-    price: 'Mulai Rp 450.000 / orang',
+    price: 'Mulai Rp 400.000 / orang',
     catatan: 'Navigasi wajib mengikuti guide'
   },
   {
@@ -524,7 +524,7 @@ export const mountainsData = [
     ],
     kuota: 'Min 3 – Max 17',
     jadwal: 'By Request',
-    price: 'Mulai Rp 700.000 / orang',
+    price: 'Mulai Rp 685.000 / orang',
     catatan: 'Jalur terbuka & panas siang hari'
   },
   {
@@ -550,7 +550,7 @@ export const mountainsData = [
     ],
     kuota: 'Min 4 – Max 17',
     jadwal: 'By Request',
-    price: 'Mulai Rp 700.000 / orang',
+    price: 'Mulai Rp 685.000 / orang',
     catatan: 'Trek panjang & fisik wajib kuat'
   },
   {
@@ -576,7 +576,7 @@ export const mountainsData = [
     ],
     kuota: 'Min 4 – Max 17',
     jadwal: 'By Request',
-    price: 'Mulai Rp 700.000 / orang',
+    price: 'Mulai Rp 685.000 / orang',
     catatan: 'Medan cukup berat'
   }
 ];

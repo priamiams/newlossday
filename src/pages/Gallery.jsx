@@ -32,7 +32,11 @@ const Gallery = () => {
 
   return (
     <>
-      <SEO title="Galeri Dokumentasi" description="Dokumentasi perjalanan dan kegiatan bersama PT Lossday Sejahtera Group." />
+      <SEO 
+        title="Galeri Dokumentasi" 
+        description="Dokumentasi perjalanan dan kegiatan bersama PT Lossday Sejahtera Group." 
+        keywords="galeri open trip, foto pendakian, dokumentasi travel, kegiatan pt lossday sejahtera, galeri wisata"
+      />
       <PageBanner title="Galeri Dokumentasi" bgImage="/img/dokumentasi/gambar18.jpg" />
       
       <section className="py-20 bg-gray-50 min-h-screen">
@@ -56,11 +60,10 @@ const Gallery = () => {
           </div>
 
           {/* Masonry-like Grid */}
-          <motion.div 
-            className="columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-6 space-y-6"
-            layout
+          <div 
+            className="columns-2 sm:columns-3 md:columns-4 lg:columns-6 gap-3 sm:gap-4 space-y-3 sm:space-y-4"
           >
-            <AnimatePresence>
+            <AnimatePresence mode="popLayout">
               {filteredGallery.map((item, index) => (
                 <motion.div 
                   key={item.id}
@@ -85,7 +88,7 @@ const Gallery = () => {
                 </motion.div>
               ))}
             </AnimatePresence>
-          </motion.div>
+          </div>
 
           {filteredGallery.length === 0 && (
             <div className="text-center py-20">

@@ -14,8 +14,9 @@ const Home = () => {
   return (
     <>
       <SEO 
-        title="Home" 
-        description="PT Lossday Sejahtera Group - Travel Agency Premium untuk Open Trip, Private Trip, Corporate Gathering, dan Rental Transportasi." 
+        title="Beranda" 
+        description="PT Lossday Sejahtera Group - Travel Agency Premium untuk Open Trip Gunung, Private Trip, Corporate Gathering, Rental Transportasi, dan Sewa Alat Gunung Terbaik."
+        keywords="travel premium, open trip gunung, private trip, corporate gathering, rental transportasi, sewa alat outdoor, pt lossday sejahtera group, biro perjalanan bogor"
       />
       <div className="pt-0">
         <Hero />

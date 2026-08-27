@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import SEO from '../components/common/SEO';
 import PageBanner from '../components/common/PageBanner';
 import { companyData } from '../data/company';
-import { MdLocationOn, MdEmail, MdPhone, MdSend } from 'react-icons/md';
+import { MdLocationOn, MdEmail, MdSend } from 'react-icons/md';
 import { FaInstagram, FaWhatsapp } from 'react-icons/fa';
 
 const Contact = () => {
@@ -22,13 +22,24 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     const text = `Halo Admin Lossday,\n\nNama: ${formData.name}\nEmail: ${formData.email}\nNo. HP: ${formData.phone}\nLayanan: ${formData.service}\n\nPesan:\n${formData.message}`;
-    const url = `${companyData.whatsapp}?text=${encodeURIComponent(text)}`;
+    
+    let targetNumber = companyData.whatsappOpenTrip;
+    
+    if (formData.service === 'Private Trip' || formData.service === 'Corporate Gathering') {
+      targetNumber = companyData.whatsappPrivate;
+    }
+    
+    const url = `https://wa.me/${targetNumber}?text=${encodeURIComponent(text)}`;
     window.open(url, '_blank');
   };
 
   return (
     <>
-      <SEO title="Hubungi Kami" description="Hubungi PT Lossday Sejahtera Group untuk pertanyaan, konsultasi, dan pemesanan layanan pariwisata." />
+      <SEO 
+        title="Hubungi Kami" 
+        description="Hubungi PT Lossday Sejahtera Group untuk pertanyaan, konsultasi, dan pemesanan layanan pariwisata." 
+        keywords="kontak lossday sejahtera, hubungi travel agency, pesan open trip, customer service lossday, alamat pt lossday sejahtera group"
+      />
       <PageBanner title="Hubungi Kami" bgImage="/img/dokumentasi/gambar19.jpg" />
       
       <section className="py-20 bg-gray-50">
@@ -63,8 +74,28 @@ const Contact = () => {
                     <FaWhatsapp />
                   </div>
                   <div>
-                    <h4 className="font-bold text-lg mb-1">WhatsApp</h4>
-                    <a href={companyData.whatsapp} target="_blank" rel="noopener noreferrer" className="text-gray-600 text-sm hover:text-accent transition-colors">+{companyData.whatsappNumber}</a>
+                    <h4 className="font-bold text-lg mb-1">Admin Open Trip / Sewa Mobil</h4>
+                    <a href={`https://wa.me/${companyData.whatsappOpenTrip}`} target="_blank" rel="noopener noreferrer" className="text-gray-600 text-sm hover:text-accent transition-colors">+{companyData.whatsappOpenTrip}</a>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4 p-6 bg-white rounded-2xl shadow-sm border border-gray-100 hover:border-primary transition-colors">
+                  <div className="w-12 h-12 bg-primary/10 text-primary rounded-xl flex items-center justify-center text-2xl shrink-0">
+                    <FaWhatsapp />
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-lg mb-1">Admin Private / Gathering / Kemitraan</h4>
+                    <a href={`https://wa.me/${companyData.whatsappPrivate}`} target="_blank" rel="noopener noreferrer" className="text-gray-600 text-sm hover:text-accent transition-colors">+{companyData.whatsappPrivate}</a>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4 p-6 bg-white rounded-2xl shadow-sm border border-gray-100 hover:border-primary transition-colors">
+                  <div className="w-12 h-12 bg-primary/10 text-primary rounded-xl flex items-center justify-center text-2xl shrink-0">
+                    <FaWhatsapp />
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-lg mb-1">Layanan Pengaduan</h4>
+                    <a href={`https://wa.me/${companyData.whatsappPengaduan}`} target="_blank" rel="noopener noreferrer" className="text-gray-600 text-sm hover:text-accent transition-colors">+{companyData.whatsappPengaduan}</a>
                   </div>
                 </div>
 
