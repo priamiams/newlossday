@@ -1,27 +1,18 @@
-import { motion, useScroll, useTransform } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { companyData } from '../../data/company';
 
 const Hero = () => {
-  const { scrollY } = useScroll();
-  const y = useTransform(scrollY, [0, 1000], [0, 300]);
-  const opacity = useTransform(scrollY, [0, 500], [1, 0]);
-
   const heroImage = '/img/dokumentasi/gambar6.jpg';
 
 
 
-  const staggerItem = {
-    hidden: { opacity: 0, y: 30 },
-    show: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } }
-  };
-
   return (
     <div className="relative h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Image with Overlay and Parallax */}
-      <motion.div style={{ y }} className="absolute inset-0 z-0 w-full h-[120%] -top-[10%]">
+      {/* Background Image with Overlay */}
+      <motion.div className="absolute inset-0 z-0 w-full h-full">
         <div 
-          className="w-full h-full bg-cover bg-center scale-105"
+          className="w-full h-full bg-cover bg-center"
           style={{ backgroundImage: `url(${heroImage})`, backgroundColor: '#235abe' }}
         ></div>
         <div className="absolute inset-0 z-10 bg-gradient-to-b from-black/70 via-black/40 to-black/80 pointer-events-none"></div>
@@ -30,7 +21,6 @@ const Hero = () => {
       {/* Content */}
       <motion.div 
         className="container mx-auto px-4 z-10 text-center text-white pt-20"
-        style={{ opacity }}
       >
         <motion.p
           className="text-accent font-medium tracking-widest mb-4 text-sm md:text-base uppercase letter-spacing-[0.2em]"
@@ -62,17 +52,6 @@ const Hero = () => {
             Hubungi Kami
           </a>
         </motion.div>
-      </motion.div>
-
-      {/* Scroll Down Indicator */}
-        <motion.div 
-          variants={staggerItem}
-          className="absolute bottom-10 left-1/2 -translate-x-1/2 hidden md:flex flex-col items-center"
-        >
-          <span className="text-white text-sm mb-2 tracking-widest">SCROLL</span>
-        <motion.div 
-          className="w-[1px] h-12 bg-white/50"
-          />
       </motion.div>
     </div>
   );
